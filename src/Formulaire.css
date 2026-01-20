@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+
+
+/* Title animation */
+h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideDown 1s ease forwards;
+}
+
+/* Form Card */
+form {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Inputs */
+.form-control {
+  height: 45px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 0 14px;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #243b55;
+  box-shadow: 0 0 0 0.15rem rgba(36, 59, 85, 0.3);
+}
+
+/* Button animation */
+button {
+  height: 45px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+  animation: pulse 2s infinite;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/* ========== KEYFRAMES ========== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(36, 59, 85, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(36, 59, 85, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(36, 59, 85, 0);
+  }
+}
